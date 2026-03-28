@@ -11,4 +11,4 @@ COPY . .
 RUN mkdir -p /app/data
 
 
-CMD ["python", "bot_minimal.py"]
+CMD ["python", "bot.py"]
