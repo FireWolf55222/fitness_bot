@@ -19,7 +19,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         photo=photo_file_id,
         caption=(
             f"🏆 *Привет, {user.first_name}!*\n\n"
-            "Меня зовут [Имя тренера], я твой онлайн-наставник.\n"
+            "Меня зовут Алексей, я твой онлайн-наставник.\n"
             "Я работаю с атлетами, которые хотят:\n"
             "• Чёткую структуру тренировок\n"
             "• Прогресс без травм\n"
