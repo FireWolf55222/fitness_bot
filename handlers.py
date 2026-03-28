@@ -12,15 +12,21 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     is_admin = (user.id == config.ADMIN_ID)
     
-    await update.message.reply_text(
-        f"🏆 *Привет, {user.first_name}!*\n\n"
-        "Меня зовут [Имя тренера], я твой онлайн-наставник.\n"
-        "Я работаю с атлетами, которые хотят:\n"
-        "• Чёткую структуру тренировок\n"
-        "• Прогресс без травм\n"
-        "• Результат, а не просто «потеть в зале»\n\n"
-        "Если ты готов двигаться к цели с поддержкой профессионала — ты по адресу.\n\n"
-        "👇 *Выбери, что нужно:*",
+    # Вставь сюда свой file_id
+    photo_file_id = "AgACAgIAAxkBAAMLacacHAKCVJnDMqC64PiI8tMlyT0AArQUaxtLuTlK5ghsTLKt2lEBAAMCAAN4AAM6BA"  # замени на свой
+    
+    await update.message.reply_photo(
+        photo=photo_file_id,
+        caption=(
+            f"🏆 *Привет, {user.first_name}!*\n\n"
+            "Меня зовут [Имя тренера], я твой онлайн-наставник.\n"
+            "Я работаю с атлетами, которые хотят:\n"
+            "• Чёткую структуру тренировок\n"
+            "• Прогресс без травм\n"
+            "• Результат, а не просто «потеть в зале»\n\n"
+            "Если ты готов двигаться к цели с поддержкой профессионала — ты по адресу.\n\n"
+            "👇 *Выбери, что нужно:*"
+        ),
         parse_mode="Markdown",
         reply_markup=kb.main_menu(is_admin)
     )
