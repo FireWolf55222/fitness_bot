@@ -1,3 +1,3 @@
 TOKEN = "8701439086:AAHzvP8D0Q8sfVWc9kjerQfjgGewniB4ggI"
-ADMIN_ID = 123456789  # замени на свой Telegram ID
+ADMIN_ID = 806542672  # замени на свой Telegram ID
 REMINDER_HOURS = 24
