@@ -1,13 +1,13 @@
+import os
 import sqlite3
 from datetime import datetime, timedelta
 
-DB_NAME = os.environ.get('DB_PATH', 'fitness.db')
+DB_NAME = os.environ.get('DB_PATH', '/data/fitness.db')
 
 def init_db():
     conn = sqlite3.connect(DB_NAME)
     c = conn.cursor()
     
-    # Услуги (пакеты тренировок)
     c.execute('''
         CREATE TABLE IF NOT EXISTS services (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -17,7 +17,6 @@ def init_db():
         )
     ''')
     
-    # Клиенты
     c.execute('''
         CREATE TABLE IF NOT EXISTS clients (
             user_id INTEGER PRIMARY KEY,
@@ -28,7 +27,6 @@ def init_db():
         )
     ''')
     
-    # Записи на тренировки
     c.execute('''
         CREATE TABLE IF NOT EXISTS appointments (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -42,7 +40,6 @@ def init_db():
         )
     ''')
     
-    # Добавляем пакеты тренировок
     c.execute("SELECT COUNT(*) FROM services")
     if c.fetchone()[0] == 0:
         services = [
