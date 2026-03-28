@@ -182,7 +182,7 @@ async def show_contacts(query):
     
     await query.message.reply_text(
         text,
-        parse_mode="Markdown",
+       
         reply_markup=kb.back_button()
     )
 
