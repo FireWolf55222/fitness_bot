@@ -179,7 +179,12 @@ async def show_contacts(query):
     text += "💬 Instagram: @xnxwix\n"
     text += "📞 Телефон: +7 (965) 705-74-78\n\n"
     text += "По всем вопросам пишите тренеру!"
-    await query.message.reply_text(text, parse_mode="Markdown", reply_markup=kb.back_button())
+    
+    await query.message.reply_text(
+        text,
+        parse_mode="Markdown",
+        reply_markup=kb.back_button()
+    )
 
 async def show_admin_panel(query):
     if query.from_user.id != config.ADMIN_ID:
