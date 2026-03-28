@@ -1,5 +1,5 @@
-import os
 
-TOKEN = os.environ.get('TOKEN', '')
-ADMIN_ID = int(os.environ.get('ADMIN_ID', 0))
+
+TOKEN = 8701439086:AAHzvP8D0Q8sfVWc9kjerQfjgGewniB4ggI
+ADMIN_ID = 806542672
 REMINDER_HOURS = 24
