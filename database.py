@@ -1,10 +1,8 @@
-import os
 import sqlite3
 from datetime import datetime, timedelta
 
-# Временное решение — база в памяти
-# Позже можно будет переделать на постоянную
-DB_NAME = ':memory:'
+# База данных будет в папке с приложением (сохраняется между перезапусками)
+DB_NAME = 'fitness.db'
 
 def init_db():
     conn = sqlite3.connect(DB_NAME)
@@ -54,5 +52,8 @@ def init_db():
     
     conn.commit()
     conn.close()
+    print("✅ База данных инициализирована")
+
+# Добавь сюда остальные функции (они такие же, как были)
 
 # Остальные функции оставляем без изменений
