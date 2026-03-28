@@ -1,3 +1,5 @@
-TOKEN = "8701439086:AAHzvP8D0Q8sfVWc9kjerQfjgGewniB4ggI"
-ADMIN_ID = 123456789  # замени на свой ID
+import os
+
+TOKEN = os.environ.get('TOKEN', '')
+ADMIN_ID = int(os.environ.get('ADMIN_ID', 0))
 REMINDER_HOURS = 24
