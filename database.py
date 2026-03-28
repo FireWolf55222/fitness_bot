@@ -1,7 +1,7 @@
 import sqlite3
 from datetime import datetime, timedelta
 
-DB_NAME = "fitness.db"
+DB_NAME = os.environ.get('DB_PATH', 'fitness.db')
 
 def init_db():
     conn = sqlite3.connect(DB_NAME)
