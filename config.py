@@ -1,6 +1,3 @@
-import os
-TOKEN = os.environ.get('TOKEN', '')
-ADMIN_ID = 7887315811  # твой ID
-
-# Настройки
-REMINDER_HOURS = 24  # за сколько часов напоминать о тренировке
+TOKEN = "8701439086:AAHzvP8D0Q8sfVWc9kjerQfjgGewniB4ggI"
+ADMIN_ID = 123456789  # замени на свой ID
+REMINDER_HOURS = 24
