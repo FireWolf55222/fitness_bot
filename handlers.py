@@ -175,9 +175,9 @@ async def cancel_appointment(query, appointment_id):
 async def show_contacts(query):
     text = "📞 *Контакты тренера:*\n\n"
     text += "📍 Онлайн-тренировки в любом месте\n"
-    text += "📱 Telegram: @fitness_coach\n"
-    text += "💬 Instagram: @fitness_coach\n"
-    text += "📞 Телефон: +7 (999) 123-45-67\n\n"
+    text += "📱 Telegram: @LX_570sss\n"
+    text += "💬 Instagram: @xnxwix\n"
+    text += "📞 Телефон: +7 (965) 705-74-78\n\n"
     text += "По всем вопросам пишите тренеру!"
     await query.message.reply_text(text, parse_mode="Markdown", reply_markup=kb.back_button())
 
