@@ -7,4 +7,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
+# Создаём папку для базы данных
+RUN mkdir -p /app/data
+
 CMD ["python", "bot.py"]
