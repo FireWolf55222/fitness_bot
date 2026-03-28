@@ -10,4 +10,5 @@ COPY . .
 # Создаём папку для базы данных
 RUN mkdir -p /app/data
 
-CMD ["python", "bot.py"]
+
+CMD ["python", "bot_minimal.py"]
